@@ -49,7 +49,8 @@
       org-fast-tag-selection-single-key 'expert
       org-html-validation-link nil
       org-export-kill-product-buffer-when-displayed t
-      org-tags-column 80)
+      org-tags-column 80
+      org-clock-mode-line-total 'current)
 
 
 ;; Lots of stuff from http://doc.norang.ca/org-mode.html
@@ -355,11 +356,10 @@ typical word processor."
 ;;                 (insert (match-string 0))))))
 
 
-(with-eval-after-load 'org
-  (define-key org-mode-map (kbd "C-M-<up>") 'org-up-element)
-  (when *is-a-mac*
-    (define-key org-mode-map (kbd "M-h") nil)
-    (define-key org-mode-map (kbd "C-c g") 'grab-mac-link)))
+(with-eval-after-load 'org  (define-key org-mode-map (kbd "C-M-<up>") 'org-up-element)
+                      (when *is-a-mac*
+                        (define-key org-mode-map (kbd "M-h") nil)
+                        (define-key org-mode-map (kbd "C-c g") 'grab-mac-link)))
 
 ;; (with-eval-after-load 'org
 ;;   (org-babel-do-load-languages
@@ -401,13 +401,13 @@ typical word processor."
 
 (use-package org-bullets
   :after org
-  :hook (org-mode .  org-bullets-mode)
+  :hook (org-mode . org-bullets-mode)
   :custom
   (org-bullets-bullet-list '( "◉"
                               "●"
                               "○"
-                              "♦"
-                              "✸"
+                              "◇"
+                              "▶"
                               "✿"
                               )))
 
