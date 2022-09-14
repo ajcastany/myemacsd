@@ -122,7 +122,8 @@
 ;;(require 'init-clojure)
 ;;(require 'init-clojure-cider)
 (require 'init-common-lisp)
-(require 'init-company)
+;;; company breaks LSP and helm is better
+;;(require 'init-company)
 (require 'init-helm)
 ;;(require 'init-ido)
 
