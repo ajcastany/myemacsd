@@ -96,7 +96,7 @@
 (require 'init-css)
 (require 'init-haml)
 (require 'init-http)
-(require 'init-python)
+;;(require 'init-python)
 ;;(require 'init-haskell)
 (require 'init-elm)
 ;;(require 'init-purescript)
@@ -123,7 +123,7 @@
 ;;(require 'init-clojure-cider)
 (require 'init-common-lisp)
 ;;; company breaks LSP and helm is better
-;;(require 'init-company)
+(require 'init-company)
 (require 'init-helm)
 ;;(require 'init-ido)
 
@@ -181,6 +181,6 @@
 
 ;; Local Variables:
 ;; coding: utf-8
-;; no-byte-compile: tini
+;; no-byte-compile: t
 ;; End:
 ;;; init.el ends here

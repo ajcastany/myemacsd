@@ -11,11 +11,17 @@
   :hook
   (;;; which-key
    (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp)
+  :commands lsp
+  :after helm
+  :bind
+  (:map lsp-mode-map
+        ([remap xref-find-apropos] . helm-lsp-workplace-symbol)))
 
 ;;  extra packages:
 (use-package lsp-ui :commands lsp-ui-mode)
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
+
+;;(define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
 
 (use-package which-key
   :config (which-key-mode))
