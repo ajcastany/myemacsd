@@ -26,5 +26,7 @@
   :config
   (add-to-list 'company-begin-commands 'backward-delete-char)
   )
+(use-package company-quickhelp)
+(company-quickhelp-mode)
 
 (provide 'init-company)
