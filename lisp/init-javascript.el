@@ -2,10 +2,10 @@
 ;;; Commentary:
 ;;; Code:
 
-(maybe-require-package 'json-mode)
-(maybe-require-package 'js2-mode)
-(maybe-require-package 'typescript-mode)
-(maybe-require-package 'prettier-js)
+(require-package 'json-mode)
+(require-package 'js2-mode)
+(require-package 'typescript-mode)
+(require-package 'prettier-js)
 
 
 ;;; Basic js-mode setup
@@ -38,6 +38,7 @@
         (js2-minor-mode 1))))
   (add-hook 'js-mode-hook 'sanityinc/enable-js2-checks-if-flycheck-inactive)
   (add-hook 'js2-mode-hook 'sanityinc/enable-js2-checks-if-flycheck-inactive)
+  (add-hook 'js2-mode-hook 'lsp)
 
   (js2-imenu-extras-setup))
 

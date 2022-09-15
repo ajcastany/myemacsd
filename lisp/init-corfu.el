@@ -23,9 +23,13 @@
     (with-eval-after-load 'corfu
       (add-hook 'corfu-mode-hook #'corfu-doc-mode)))
 
+
+
   ;; TODO: https://github.com/jdtsmith/kind-icon
   )
 
+(add-hook 'python-mode-hook (lambda () (corfu-mode -1)))
+(add-hook 'lsp-mode-hook (lambda () (corfu-mode -1)))
 
 (provide 'init-corfu)
 ;;; init-corfu.el ends here

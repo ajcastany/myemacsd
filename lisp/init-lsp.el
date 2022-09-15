@@ -12,14 +12,9 @@
   (;;; which-key
    (lsp-mode . lsp-enable-which-key-integration)
    ;; disable corfu
-   (lsp-mode . (lambda () (corfu-mode -1))))
+   )
 
-  :commands lsp
-  ;;:after helm
-  ;;:bind
-  ;; (:map lsp-mode-map
-  ;; ([remap xref-find-apropos] . helm-lsp-workplace-symbol))
-  )
+  :commands lsp)
 
 
 ;;  extra packages:

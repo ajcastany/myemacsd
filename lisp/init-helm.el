@@ -48,4 +48,6 @@
   :after helm-map
   :bind (:map lsp-mode-map
               ([remap xref-find-apropos] . helm-lsp-workspace-symbol)))
+
+(use-package helm-xref)
 (provide 'init-helm)
