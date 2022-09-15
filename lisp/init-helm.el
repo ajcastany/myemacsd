@@ -43,5 +43,9 @@
 (helm-autoresize-mode 1)
 
 (helm-mode 1)
-
+;; helm for lsp
+(use-package helm-lsp
+  :after helm-map
+  :bind (:map lsp-mode-map
+              ([remap xref-find-apropos] . helm-lsp-workspace-symbol)))
 (provide 'init-helm)
