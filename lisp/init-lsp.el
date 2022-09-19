@@ -3,7 +3,9 @@
 ;;; Required some extra config on project dir.
 
 ;;; Code:
-
+(require 'lsp)
+(require 'lsp-ui)
+(require 'which-key)
 (use-package lsp-mode
   :init
   ;; set prefix for lsp-command-keymap(few alternatives - C-l, C-c l
